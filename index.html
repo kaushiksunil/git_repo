@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/">
+    <script>
+        var siteFormat;
+        if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            siteFormat = "desktop";
+        } else {
+            siteFormat = "mobile";
+        }
+        var DDO = {};
+        DDO.getBootstrap = "US"; // set to Country Code of page content
+    </script>
+    <!--<script id="ddo-file" src="adobe/DDOFile.js"></script>-->
+    <!--<script id="adobe-script" src="//assets.adobedtm.com/1fda250a1efc690b2c6c69e8d73b0fb436ba5377/satelliteLib-b27b2abe312ed2d742dbd1d5eba6580389261158.js"></script>-->
+
+    <!-- build:css bundle.min.css-->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.css">
+    <link rel="stylesheet" href="bower_components/ngprogress/ngProgress.css">
+    <link rel="stylesheet" href="bower_components/pb-design-system/dist/css/design_system.css">
+    <link rel="stylesheet" href="css/prettify.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/careApp.css">
+    <link rel="stylesheet" href="css/ordoroApp.css">
+    <link rel="stylesheet" href="css/careAppDetailModel.css">
+    <link rel="stylesheet" href="css/webstoreplugin.bundle.css">
+    <!-- endbuild -->
+    <link rel="stylesheet" type="text/css" href="js/GeoApi/geosearch.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title ng-if="currentPortal==='devPortal'">Care App</title>
+    <!--<title ng-if="currentPortal==='appPortal'">GeoTAX</title>-->
+    <!--<title ng-if="currentPortal==='GeoTax'">GeoTAX</title>-->
+ 
+</head>
+<body class="{{bodyClass}}">
+<div ui-view=""></div>
+
+</body>
+<!-- build:js vendors.min.js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/ngstorage/ngStorage.js"></script>
+<script src="bower_components/ngprogress/build/ngprogress.min.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/d3/d3.min.js" charset="utf-8"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-jwt/dist/angular-jwt.js"></script>
+<script src="bower_components/angular-resource/angular-resource.min.js"></script>
+<script src="bower_components/pb-design-system/dist/js/pb.ds.components.js"></script>
+<script src="bower_components/angular-translate/angular-translate.min.js"></script>
+<script src="bower_components/bluebird/js/browser/bluebird.js"></script>
+<!--<script src="bower_components/file-saver/FileSaver.min.js"></script>-->
+
+<!-- endbuild -->
+
+<script src="js/jquery.form.min.js"></script>
+<script src="js/angular-base64/angular-base64.min.js"></script>
+<!--<script src="js/GeoApi/geosearch.directive.js"></script>-->
+<!--<script src="js/xlsx.full.min.js"></script>-->
+<!--<script src="js/SheetJS-angular.js"></script>-->
+<!--<script src="js/json-export-excel.js"></script>-->
+
+<!-- build:js scripts.min.js -->
+<script src="controllers/Init.js"></script>
+<script src="app.js"></script>
+<script src="services/services.js"></script>
+<!--<script src="services/servicesnew.js"></script>-->
+<!--<script src="services/dashboard_service.js"></script>-->
+<!--<script src="services/postageBalanceService.js"></script>-->
+<script src="services/factories.js"></script>
+<script src="services/ordoro/ordoroService.js"></script>
+<!--<script src="filters/table.js"></script>-->
+<!--<script src="controllers/FooterController.js"></script>-->
+<!--<script src="controllers/DashboardController.js"></script>-->
+<!--<script src="controllers/DashboardHeaderController.js"></script>-->
+<!--<script src="controllers/ProfileController.js"></script>-->
+<!--<script src="controllers/BillingPlanController.js"></script>-->
+<script src="controllers/APIKeyController.js"></script>
+<script src="controllers/GettingStartedController.js"></script>
+<!--<script src="controllers/docsController.js"></script>-->
+<!--<script src="controllers/PostageBalanceController.js"></script>-->
+<!--<script src="controllers/OnboardingMerchantController.js"></script>-->
+<!--<script src="controllers/ShippingTestController.js"></script>-->
+<!--<script src="controllers/UpgradeAndAddProductController.js"></script>-->
+<!--<script src="controllers/ProductSelectionController.js"></script>-->
+<!--<script src="controllers/DocumentationController.js"></script>-->
+<!--<script src="components/DashboardComponent.js"></script>-->
+<script src="controllers/geotaxHeaderController.js"></script>
+<script src="controllers/geotaxController.js"></script>
+<script src="controllers/ordoro/ordoroAppController.js"></script>
+<script src="controllers/careApp/careAppDetailModelController.js"></script>
+<script src="controllers/careApp/careAppController.js"></script>
+<script src="controllers/appstore/webstorepluginController.js"></script>
+<!-- <script src="controllers/appstore/webstoreplugin.module.js"></script>
+<script src="controllers/appstore/webstoreplugin.service.js"></script> -->
+<!--<script src="controllers/legalController.js"></script>-->
+<!--<script src="controllers/geotaxAutoController.js"></script>-->
+<!--<script src="controllers/homeController.js"></script>-->
+<!-- endbuild -->
+</html>
